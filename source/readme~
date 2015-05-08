@@ -1,0 +1,11 @@
+MDOS: a method for Motif Discovery using Orthologous Sequences
+
+MDOC is a comparative genomics method for regulatory motif discovery. Different from previous
+methods, it does not require or use sequence alignments. It is particularly suitable for 
+discovering motifs in highly diverged genomes, or genomes with sequence alignments difficult 
+to obtain or poor in quality.
+
+
+
+
+

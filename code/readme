@@ -1,0 +1,30 @@
+MDOS: a method for Motif Discovery using Orthologous Sequences
+
+MDOS is a comparative genomics method for regulatory motif discovery. Different from previous
+methods, it does not require or use sequence alignments. It is particularly suitable for 
+discovering motifs in highly diverged genomes, or genomes with sequence alignments difficult 
+to obtain or poor in quality.
+
+
+To run the program: use the following command line:
+
+java -jar mdos.jar input_seq_file kmer_size 
+
+#input_seq_file: is the filename of input sequences.  The format of the file should start with ">id", 
+                 followed by two lines of sequences representing sequences from each of the two genomes 
+		 being compared. For an example: see test.seq file
+#kmer_size:      the size of k-mer 
+
+
+Note that you will need java version 1.5 or above to run the code. 
+The java code uses two external packages: trove-2.0.3.jar and commons-math-1.1.jar, which need to be placed 
+in the same directory as the mdos.jar file. 
+
+
+For a test run,
+1. Download the 1Kb upstream sequences of orthologous genes between S. cerevisiae and S. bayanus from:
+http://www.ics.uci.edu/~xhx/project/mdos/data/CER_BAY_U.fa
+
+2. Run: java -jar mdos.jar CER_BAY_U.fa 7
+This will calculate the conservation z-scores of all 7-mers and expand those with z-scores>=2 to include degenerate codes. 
+
